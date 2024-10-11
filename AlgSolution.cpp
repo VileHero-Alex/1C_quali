@@ -75,7 +75,7 @@ class Trie {
 
 
 bool isInteger(const std::string& str) { 
-    for (size_t i = 1; i < str.length(); ++i) { 
+    for (size_t i = 0; i < str.length(); ++i) { 
         if (!std::isdigit(str[i])) { 
             return false; 
         } 
@@ -99,7 +99,7 @@ void Interaction() {
       std::cin >> toCheck;
 
       while (!isInteger(toCheck)) {
-        std::cout << "Try again, you need to type a number!\n";
+        std::cout << "Try again, you need to type a positive number!\n";
         std::cin >> toCheck;
       }
 
